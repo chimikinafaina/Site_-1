@@ -1,0 +1,266 @@
+@import url("css/normalize.css");
+
+header {
+    width: 100%;
+    background-color: #007765;
+    height: 70px;
+    position: fixed;
+}
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: -6px;
+    margin-left: 180px;
+    color: #f2f2f2;
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+nav li:last-child {
+    margin-right: 45px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+nav li:not(:last-child)::after {
+    content: '|';
+    color: #ffffff;
+    margin-left: 4px;
+}
+
+.container2, .container3, .container4, .container6 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+.container2 img, .container3 img, .container4 img, .container6 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.container2 h1, .container4 h1, .container6 h1 {
+    color: #007765;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container2 p, .container4 p, .container3 p {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 25px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.container3 p {
+    color: white;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container5 {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.container5 img {
+    width: 100px;
+    height: auto;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.team-member {
+    flex: 1 1 calc(15% - 20px);
+    max-width: calc(15% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #007765;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-member p {
+    margin: 20px 0 0;
+    font-size: 25px;
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 80px;
+    background-color: black;
+    color: white;
+}
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        height: 50px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .container2 h1, .container4 h1, .container6 h1 {
+        font-size: 30px;
+    }
+
+    .container2 p, .container4 p, .container3 p {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .text-overlay {
+        font-size: 30px;
+    }
+
+    .team {
+        top: 40%;
+        width: 100%;
+    }
+
+    .team-member {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Медиазапросы для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        margin-left: 50px;
+    }
+
+    nav li {
+        margin-right: 15px;
+    }
+
+    .container2 h1, .container4 h1, .container6 h1 {
+        font-size: 35px;
+    }
+
+    .container2 p, .container4 p, .container3 p {
+        font-size: 20px;
+        width: 70%;
+    }
+
+    .text-overlay {
+        font-size: 35px;
+    }
+
+    .team-member {
+        flex: 1 1 calc(30% - 20px);
+        max-width: calc(30% - 20px);
+    }
+}
+
+/* Медиазапросы для настольных ПК */
+@media (min-width: 1025px) {
+    .logo {
+        margin-left: 180px;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    .container2 h1, .container4 h1, .container6 h1 {
+        font-size: 40px;
+    }
+
+    .container2 p, .container4 p, .container3 p {
+        font-size: 25px;
+        width: 50%;
+    }
+
+    .text-overlay {
+        font-size: 45px;
+    }
+
+    .team-member {
+        flex: 1 1 calc(15% - 20px);
+        max-width: calc(15% - 20px);
+    }
+}
